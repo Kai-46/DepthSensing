@@ -91,9 +91,9 @@ Depth sensing is a critical component of autonomous driving technologies, but to
           <div class="flex-item flex-column full-width">
             <h2 class="text add-top-margin">Our Approach</h2>
             <hr>
-            Our novel camera system consists of three small-FOV camereas that are able to zoom in distant scenes. The addition of the back camera, along with our novel depth estimation pipeline, makes it possible to address the geoemtric ambiguity, i.e., Bas-relief ambiguity, arising in the two-camera stereo setup. <br><br>
-
-            Below are a snapshot of our approach. Please reference our paper for details. 
+ <!--            Our novel camera system consists of three small-FOV camereas that are able to zoom in distant scenes. The addition of the back camera, along with our novel depth estimation pipeline, makes it possible to address the geoemtric ambiguity, i.e., Bas-relief ambiguity, arising in the two-camera stereo setup. <br><br>
+ -->
+            Below are a snapshot of our approach: novel camera system and depth estimation pipeline. Please reference our paper for details. 
             <a href="./my_files/approach_overview.png" class="flex-column"><img width="800" src="./my_files/approach_overview.png"></a>
 <!--             <a href="./my_files/camera_setup.png" class="flex-column"><img width="400" src="./my_files/camera_setup.png"></a>
             <a href="./my_files/depth_estimation.png" class="flex-column"><img width="400" src="./my_files/depth_estimation.png"></a> -->
@@ -106,6 +106,10 @@ Depth sensing is a critical component of autonomous driving technologies, but to
           <div class="flex-item flex-column full-width">
             <h2 class="text add-top-margin">Example Result</h2>
             <hr>
+            From left to right, the four figures are pseudo-rectified left view, estimated disparity map (having an unknown offset), estimated disparity offset, final depth map (unit is meter). <br><br>
+
+            The redbox on the pseudo-rectified left view marks the value (320m) acquired by a laser rangefinder, while the redbox on the final depth map marks our estimated depth (300.8m). 
+            <a href="./my_files/ex_results.png" class="flex-column"><img width="800" src="./my_files/ex_results.png"></a>
 
 <!--          <h3 class="text add-top-margin">Input Images</h3>
           <div class="gallery">
