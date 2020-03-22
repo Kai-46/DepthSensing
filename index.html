@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148984682-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148984682-1');
+  </script>
+
+  <title>Depth Sensing Beyond LiDAR Range</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+  <style>
+    .menu-index {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-container"></div>
+  <div class="content-container">
+    <div class="content">
+      <div class="content-table flex-column">
+
+        <!--Title and Author-->
+        <div class="flex-row">
+          <div class="flex-item flex-column full-width">
+            <h1 class="text" align="center">Depth Sensing Beyond LiDAR Range</h1>
+            <p class="text" align="center">
+              <a href="https://kai-46.github.io/website/">Kai Zhang<sup>1</sup>,</a>&nbsp;Jiaxin Xie<sup>2</sup>,&nbsp;<a href="http://cs.cornell.edu/~snavely">Noah Snavely<sup>1</sup>,</a>&nbsp;<a href="https://cqf.io/">Qifeng Chen<sup>2</sup></a><br>
+              <a href="https://tech.cornell.edu/"> <sup>1</sup>Cornell Tech, Cornell University</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.ust.hk/home"><sup>2</sup>HKUST</a>
+          </div>
+        </div>
+        <!--End of Title And Author-->
+
+        <!--Abstract-->
+        <div class="flex-row">
+          <div class="flex-item flex-column full-width">
+            <p class="text add-top-margin">
+Depth sensing is a critical component of autonomous driving technologies, but today's LiDAR-based or stereo-camera-based solutions have limited range. We seek to increase the maximum range of self-driving vehicles' depth perception modules for the sake of better safety. To that end, we propose a novel three-camera system that utilizes small-FOV cameras. Our system, along with our novel processing pipeline, does not require full pre-calibration and can output dense depth maps with practically acceptable accuracy for distant scenes and objects that are not well covered by most commercial LiDARs.
+            </p>
+          </div>
+        </div>
+        <!--End of Abstarct-->
+
+        <!--Paper-->
+        <div class="flex-row" id="paper">
+          <div class="flex-item flex-column full-width">
+            <h2 class="text add-top-margin">Paper</h2>
+            <hr>
+          </div>
+
+          <div class="flex-item flex-item-stretch flex-column">
+            <a href="./my_files/paper.pdf"><img class="image max-width-400" src="./my_files/paper_cover.png"></a>
+          </div>
+
+          <div class="flex-item flex-item-stretch-4 flex-column">
+            <p class="text">
+            <a href="./my_files/Depth_Sensing_Beyond_LiDAR_Range.pdf">[pdf]</a>&nbsp;&nbsp;<a href="">[arxiv]</a>
+            </p>
+            <p class="text">
+              @inproceedings{DepthSensing-2020,<br>
+                  &nbsp;title={{Depth Sensing Beyond LiDAR Range}},<br>
+                  &nbsp;author={Zhang, Kai and Xie, Jiaxin and Snavely, Noah and Chen, Qifeng},<br>
+                  &nbsp;booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},<br>
+                &nbsp;year={2020}<br>
+              }<br></p>
+          </div>
+        </div>
+
+        <!--Approach-->
+        <div class="flex-row">
+          <div class="flex-item flex-column full-width">
+            <h2 class="text add-top-margin">Our Approach</h2>
+            <hr>
+            Our novel camera system consists of three small-FOV camereas that are able to zoom in distant scenes. The addition of the back camera, along with our novel depth estimation pipeline, makes it possible to address the geoemtric ambiguity, i.e., Bas-relief ambiguity, arising in the two-camera stereo setup. <br><br>
+
+            Below are a snapshot of our approach. Please reference our paper for details. 
+            <a href="./my_files/approach_overview.png" class="flex-column"><img width="800" src="./my_files/approach_overview.png"></a>
+<!--             <a href="./my_files/camera_setup.png" class="flex-column"><img width="400" src="./my_files/camera_setup.png"></a>
+            <a href="./my_files/depth_estimation.png" class="flex-column"><img width="400" src="./my_files/depth_estimation.png"></a> -->
+          </div>
+        </div>
+        <!--End of Approach-->
+
+        <!--Main Result-->
+        <div class="flex-row" id="example-result">
+          <div class="flex-item flex-column full-width">
+            <h2 class="text add-top-margin">Example Result</h2>
+            <hr>
+
+<!--          <h3 class="text add-top-margin">Input Images</h3>
+          <div class="gallery">
+            <a href="./my_files/0000_WV03_14NOV15_135121-P1BS-500171606160_05_P005.png" class="flex-column"><img src="./my_files/0000_WV03_14NOV15_135121-P1BS-500171606160_05_P005.png">
+            </a>
+            <a href="./my_files/0001_WV03_15JAN05_135727-P1BS-500497282040_01_P001.png" class="flex-column"><img src="./my_files/0001_WV03_15JAN05_135727-P1BS-500497282040_01_P001.png">
+            </a>
+            <a href="./my_files/0002_WV03_15JAN11_135414-P1BS-500497283010_01_P001.png" class="flex-column"><img src="./my_files/0002_WV03_15JAN11_135414-P1BS-500497283010_01_P001.png">
+            </a>
+            <p class="flex-column"><font size="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</font></p>
+          </div>
+
+         <p class="text add-top-margin">
+            View all 47 input images&nbsp;<a href="https://drive.google.com/drive/folders/14jxu_hoRTCDoS_iD8k8nX2etVpwn_GmT?usp=sharing">[google drive link]</a>. The resolution of these images is around 30 cm per pixel.
+          </p>
+
+          <h3 class="text add-top-margin">Reconstructed Point Cloud</h3>
+          <iframe src="./my_files/pointcloud.html" width="100%" height="500px" style="display: block;"></iframe>
+
+          <h3 class="text add-top-margin">Metric Numbers</h3>
+          <div class="gallery">
+            <a href="./my_files/target_after_align.jpg" class="flex-column"><img src="./my_files/target_after_align.jpg">
+              <div>Ground-truth Height Map</div>
+            </a>
+            <a href="./my_files/source_after_align.jpg" class="flex-column"><img src="./my_files/source_after_align.jpg">
+              <div>Our Height Map</div>
+            </a>
+            <a href="./my_files/error_map.jpg" class="flex-column"><img src="./my_files/error_map.jpg">
+              <div>Error Map</div>
+            </a>
+            <a href="./my_files/color_bar.png" class="flex-column"><img src="./my_files/color_bar.png">
+              <div>Color Bar (Unit is Meter)</div>
+            </a>
+          </div>
+          <p class="text">
+          Median height error is 0.315 meters; completeness score is 72.5%. (completeness score is defined as the percentage of non-empty ground-truth height map cells where the reconstructed height value exists and is within 1 meter of the ground-truth value.) <br><br>
+
+          Our work makes it possible to apply state-of-the-art 3D reconstruction methods from the computer vision community to satellite images. We show that our method is competitive in accuracy compared to a state-of-the-art pipeline specific to satellite imagery, while also demonstrating scalability and efficiency. In the long run, our goal is to bridge the gap between 3D reconstruction methods in the computer vision and remote sensing communities. 
+          </p>
+          </div> -->
+        </div>
+        <!--End of Main Result-->
+
+
+        <!--Poster-->
+<!--         <div class="flex-row" id="poster">
+          <div class="flex-item flex-column full-width">
+            <h2 class="add-top-margin">Poster</h2>
+            <hr>
+            <p class="text">
+            <a href="./my_files/paper_poster.pdf">[Click to view our poster.]</a>
+            </p>
+        </div> -->
+        <!--End of poster-->
+
+        <!--Code-->
+        <div class="flex-row" id="code">
+          <div class="flex-item flex-column full-width">
+            <h2 class="add-top-margin">Code</h2>
+            <hr>
+            <p class="text">
+<!--              <a href="https://github.com/Kai-46/VisSatSatelliteStereo">VisSatSatelliteStereo</a>: view the readme on github. <br>
+              <a href="https://github.com/Kai-46/ColmapForVisSat">ColmapForVisSat</a> on github: backbone for VisSatSatelliteStereo. <br>
+              <a href="https://github.com/Kai-46/VisSatToolSet">VisSatToolSet</a> on github: see the data section below for details about this repo. <br>
+              <a href="https://github.com/Kai-46/rpc_triangulation_solver">rpc_triangulation_solver</a>: view the readme on github. <br>
+              <a href="https://github.com/Kai-46/SatellitePlaneSweep">SatellitePlaneSweep</a>: view the readme on github.<br>
+              <a href="https://github.com/Kai-46/GraphCutOnCostVolume.git">GraphCutOnCostVolume</a>: to be released. -->
+            </p>
+        </div>
+        <!--End of Code-->
+
+        <!--Data-->
+<!--         <div class="flex-row" id="data">
+          <div class="flex-item flex-column full-width">
+            <h2 class="add-top-margin">Data</h2>
+            <hr>
+            <p class="text">
+              Our method (the SfM part of <a href="https://github.com/Kai-46/VisSatSatelliteStereo">[VisSatSatelliteStereo]</a>) converts the satellite imagery data to more conventional and accessible format:
+            </p>
+            <ul>
+                <li>HDR images are tonemapped to LDR.</li>
+                <li>RPC cameras are approximated with perspective cameras, which then are bundle-adjusted by our pipline.</li>
+            </ul>
+            <p class="text">
+              You can <a href="https://drive.google.com/drive/folders/14-xbQKs0X0Wa4LNHizutg4wXYNqMSpqu?usp=sharing">download our data from google drive</a>. If you perform Multi-view Stereo on these images and cameras, the reconstructed point cloud will be in a local ENU coordinate system. We <a href="https://github.com/Kai-46/VisSatToolSet">provide this accompanying toolset [VisSatToolSet]</a> to convert the points' coordinates to the global coordinate system, i.e., (UTM east, UTM north, altitude), and report its accuracy by comparing to the ground-truth. 
+            </p> -->
+
+<!--             <p class="text">
+Our data is based upon the <a href="https://spacenetchallenge.github.io/datasets/mvs_summary.html">public IARPA Multi-View Stereo 3D Mapping Challenge remote sensing dataset</a>. If you use our transformed data in your work, please include the following citations:
+            </p>
+            <ul>
+              <li>@inproceedings{VisSat-2019,<br>
+                  &nbsp;title={Leveraging Vision Reconstruction Pipelines for Satellite Imagery},<br>
+                  &nbsp;author={Zhang, Kai and Sun, Jin and Snavely, Noah},<br>
+                  &nbsp;booktitle={ICCV Workshop on 3D Reconstruction in the Wild (3DRW)},<br>
+                &nbsp;year={2019}<br>
+              }<br></li>
+              <li>@inproceedings{bosch2016multiple,<br>
+                  &nbsp;title={A multiple view stereo benchmark for satellite imagery},<br>
+                  &nbsp;author={Bosch, Marc and Kurtz, Zachary and Hagstrom, Shea and Brown, Myron},<br>
+                  &nbsp;booktitle={IEEE Applied Imagery Pattern Recognition Workshops},<br>
+                &nbsp;year={2016}<br>
+              }<br></li>
+            </ul> -->
+        </div>
+        <!--End of Data-->
+
+<!--         <div class="flex-row" id="gallery">
+          <div class="flex-item flex-column full-width">
+            <h2 class="text add-top-margin">Gallery</h2>
+            <hr>
+          <h3 class="text add-top-margin">Jacksonville, Florida, USA (37 images)</h3>
+          <iframe src="./my_files/gallery/jacksonville/pointcloud.html" width="100%" height="500px" style="display: block;"></iframe>
+        </div>
+        <div> -->
+
+        <!--Acknowlegements-->
+<!--         <div class="flex-row">
+          <div class="flex-item flex-column full-width">
+            <h2 class="add-top-margin">Acknowledgements</h2>
+            <hr>
+            <p class="text">
+The research is based upon work supported by the Office of the Director of National Intelligence (ODNI), Intelligence Advanced Research Projects Activity (IARPA), via DOI/IBC Contract Number D17PC00287. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of the ODNI, IARPA, or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for Governmental purposes notwithstanding any copyright annotation thereon.
+            </p>
+          </div>
+        </div> -->
+        <!--End of Acknowledgements-->
+
+
+
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>
